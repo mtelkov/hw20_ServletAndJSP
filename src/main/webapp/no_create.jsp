@@ -1,10 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-  <head>
-    <title>University</title>
-  </head>
-  <body>
-    <h2>Раздел находится в разработке</h2>
-    <br>
-  </body>
-</html>
+<%@ include file="header.jsp" %>
+<%@ include file="aside.jsp" %>
+<div class="main">
+  <div class="main_content">
+    <strong>Раздел находится в разработке</strong>
+  </div>
+</div>
+<%@ include file="footer.jsp" %>

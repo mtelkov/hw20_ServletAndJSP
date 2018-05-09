@@ -3,9 +3,7 @@
 <%@ include file="aside.jsp" %>
 <div class="main">
     <div class="main_content">
-        <div class="enter">
-            <strong><a href="/login">Войти</a></strong>
-        </div>
+        <strong>Недостаточно прав для просмотра страницы</strong>
     </div>
 </div>
 <%@ include file="footer.jsp" %>

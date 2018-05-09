@@ -1,13 +1,8 @@
-<%@ page import="ru.innopolis.stc9.pojo.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-  <head>
-    <title>Admin area</title>
-  </head>
-  <body>
-    <% User user = (User) session.getAttribute("user"); %>
-    <p>Вы вошли как: <i><%= user.getFIO()%></i></p>
-    <br>
+<%@ include file="header.jsp" %>
+<%@ include file="aside.jsp" %>
+<div class="main">
+  <div class="main_content">
     <a href="${pageContext.request.contextPath}/admin/dashboard/lessons?lsnId=all">Посмотреть список всех занятий</a>
     <form method="get" action="${pageContext.request.contextPath}/admin/dashboard/lessons">
       <p>Введите ID занятия ->
@@ -15,5 +10,6 @@
         <input type="submit" value="Просмотреть">
       </p>
     </form>
-  </body>
-</html>
+  </div>
+</div>
+<%@ include file="footer.jsp" %>
