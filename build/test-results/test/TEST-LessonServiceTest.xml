@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LessonServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-05-08T19:02:03" hostname="TELKOVHOMEPC" time="0.827">
+  <properties/>
+  <testcase name="getAllLessonsTest" classname="LessonServiceTest" time="0.827"/>
+  <system-out><![CDATA[2018-05-08 22:02:03 [INFO ] LessonService:25 - РћР±СЂР°С‰РµРЅРёРµ Рє СЃРµСЂРІРёСЃСѓ
+ 2018-05-08 22:02:03 [INFO ] LessonDAOImpl:98 - РћР±СЂР°С‰РµРЅРёРµ Рє DAO
+ ]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
