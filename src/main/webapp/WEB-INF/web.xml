@@ -55,6 +55,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>StudentSubjectController</servlet-name>
+        <servlet-class>ru.innopolis.stc9.controller.StudentSubjectController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StudentSubjectController</servlet-name>
+        <url-pattern>/student/dashboard/subjects</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>StudentLessonController</servlet-name>
         <servlet-class>ru.innopolis.stc9.controller.AdminLessonController</servlet-class>
     </servlet>

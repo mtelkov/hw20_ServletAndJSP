@@ -4,6 +4,9 @@ import org.apache.log4j.Logger;
 import ru.innopolis.stc9.dao.LessonDAO;
 import ru.innopolis.stc9.dao.LessonDAOImpl;
 import ru.innopolis.stc9.pojo.Lesson;
+import ru.innopolis.stc9.pojo.Student;
+import ru.innopolis.stc9.pojo.Subject;
+
 import java.util.ArrayList;
 
 public class LessonService {
@@ -24,5 +27,10 @@ public class LessonService {
     public ArrayList<Lesson> getAllLessons() {
         logger.info("Обращение к сервису");
         return lessonDao.getAllLessons();
+    }
+
+    public ArrayList<Subject> getDistinctSubjectsLessonsForStudent(int stud_id){
+        logger.info("Обращение к сервису");
+        return lessonDao.getDistinctSubjectsLessonsForStudent(stud_id);
     }
 }
