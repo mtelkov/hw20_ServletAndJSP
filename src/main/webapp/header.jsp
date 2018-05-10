@@ -1,9 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<%@ page import="ru.innopolis.stc9.pojo.User" %>
-<% User user = (User) session.getAttribute("user"); %>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,9 +18,9 @@
     <header class="header">
         <div class="logo">My University</div>
         <div class="logout">
-            <c:if test="${user != null}">
+            <c:if test="${sessionScope.user != null}">
                 <c:out value="Вы вошли как: "/>
-                <c:out value="${user.getFIO()}"/>
+                <c:out value="${sessionScope.user.getFIO()}"/>
                 <c:out value="|   "/>
                 <a href="${pageContext.request.contextPath}/login?action=logout">Выйти</a>
             </c:if>

@@ -36,6 +36,7 @@ body {
     margin-top: 10px;
     width: 250px;
     padding: 0 10px; /* Отступы вокруг текста */
+    font-size: 16px;
 }
 
 /* Middle

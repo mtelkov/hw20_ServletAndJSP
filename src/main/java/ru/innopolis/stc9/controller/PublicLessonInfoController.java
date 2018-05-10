@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class AdminLessonController extends HttpServlet {
-    private final static Logger logger = Logger.getLogger(AdminLessonController.class);
+public class PublicLessonInfoController extends HttpServlet {
+    private final static Logger logger = Logger.getLogger(PublicLessonInfoController.class);
     private LessonService lessonService = new LessonService();
 
     /**

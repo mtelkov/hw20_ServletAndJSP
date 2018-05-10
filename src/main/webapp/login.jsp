@@ -18,7 +18,7 @@
                 "<br><br>" : ""%>
         <p>Введите данные для авторизации:</p>
         <form action="${pageContext.request.contextPath}/login" method="post">
-            <table border="2" align="center" cellspacing="5" cellpadding="6" rules="none">
+            <table border="2" align="center" cellspacing="5" cellpadding="13" rules="none">
                 <tr>
                     <td align="left">Войти как:</td>
                     <td>
