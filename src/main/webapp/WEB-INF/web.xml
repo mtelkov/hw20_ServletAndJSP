@@ -26,11 +26,11 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>PublicLessonInfoController</servlet-name>
+        <servlet-name>AdminLessonInfoController</servlet-name>
         <servlet-class>ru.innopolis.stc9.controller.PublicLessonInfoController</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>PublicLessonInfoController</servlet-name>
+        <servlet-name>AdminLessonInfoController</servlet-name>
         <url-pattern>/admin/dashboard/lessons</url-pattern>
     </servlet-mapping>
 
@@ -64,11 +64,11 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>StudentLessonController</servlet-name>
+        <servlet-name>StudentLessonInfoController</servlet-name>
         <servlet-class>ru.innopolis.stc9.controller.PublicLessonInfoController</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>StudentLessonController</servlet-name>
+        <servlet-name>StudentLessonInfoController</servlet-name>
         <url-pattern>/student/dashboard/lessons</url-pattern>
     </servlet-mapping>
 
