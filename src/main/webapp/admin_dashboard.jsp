@@ -4,7 +4,7 @@
 
 <div class="main">
   <div class="main_content">
-    <a href="${pageContext.request.contextPath}/admin/dashboard/lessons?lsnId=all">Посмотреть список всех занятий</a>
+    <a href="${pageContext.request.contextPath}/admin/dashboard/lessons">Посмотреть список всех занятий</a>
     <form method="get" action="${pageContext.request.contextPath}/admin/dashboard/lessons">
       <p>Просмотреть информацию о занятии:<br>
           Введите ID занятия ->

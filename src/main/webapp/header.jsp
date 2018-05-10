@@ -8,7 +8,7 @@
     <title>MyUniversity</title>
     <meta name="keywords" content="MyUniversity"/>
     <meta name="description" content="test site"/>
-    <link href="../static/style.css" rel="stylesheet">
+    <link href="/static/style.css" rel="stylesheet">
 </head>
 
 <body>

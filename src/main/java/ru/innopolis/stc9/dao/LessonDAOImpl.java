@@ -6,6 +6,7 @@ import ru.innopolis.stc9.ConnectionManager.ConnectionManagerJDBCImpl;
 import ru.innopolis.stc9.pojo.Lesson;
 import ru.innopolis.stc9.pojo.Student;
 import ru.innopolis.stc9.pojo.Subject;
+import ru.innopolis.stc9.pojo.SubjectAndMark;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -58,7 +59,7 @@ public class LessonDAOImpl implements LessonDAO{
             statement.setString(2, String.valueOf(lesson.getTutor_id()));
             statement.setString(3, String.valueOf(lesson.getAdm_id()));
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-            statement.setString(3, sdf.format(lesson.getLsn_date()));
+            statement.setString(4, sdf.format(lesson.getLsn_date()));
             result = statement.executeUpdate();
             connection.close();
         }catch (SQLException ex) {
@@ -88,7 +89,7 @@ public class LessonDAOImpl implements LessonDAO{
             }
             connection.close();
         }catch (SQLException ex) {
-            logger.error("Error get lesson",ex);
+            logger.error("Error to get lesson",ex);
         }
         return lesson;
     }
@@ -102,7 +103,7 @@ public class LessonDAOImpl implements LessonDAO{
         Connection connection = connectionManager.getConnection();
         ArrayList<Lesson> arrayLessons = new ArrayList<>();
         try{
-            PreparedStatement statement = connection.prepareStatement("SELECT * FROM lessons");
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM lessons ORDER BY lsn_date, subj_id");
             ResultSet resultSet = statement.executeQuery();
             while(resultSet.next()){
                 arrayLessons.add(createNewLesson(resultSet));
@@ -110,6 +111,35 @@ public class LessonDAOImpl implements LessonDAO{
             connection.close();
         }catch (SQLException ex) {
             logger.error("Error get all lesson",ex);
+        }
+        return arrayLessons;
+    }
+
+    /**
+     * Метод возвращает все занятия по указанному предмету для указанного студента
+     * @param subjectId - ID предмета
+     * @param stud_id - ID студента
+     * @return список занятий
+     */
+    public ArrayList<Lesson> getStudentVisitedLessonsWithMark(int subjectId, int stud_id){
+        logger.info("Обращение к DAO");
+        Connection connection = connectionManager.getConnection();
+        ArrayList<Lesson> arrayLessons = new ArrayList<>();
+        try{
+            PreparedStatement statement = connection.prepareStatement("SELECT ln.*, v.mark FROM lessons ln " +
+                    "INNER JOIN subjects s on ln.subj_id = s.subj_id " +
+                    "INNER JOIN lesson_visitors v on ln.lsn_id = v.lsn_id " +
+                    "WHERE s.subj_id = ? and v.stud_id = ? " +
+                    "ORDER BY s.name");
+            statement.setInt(1, subjectId);
+            statement.setInt(2, stud_id);
+            ResultSet resultSet = statement.executeQuery();
+            while(resultSet.next()){
+                arrayLessons.add(createNewLesson(resultSet));
+            }
+            connection.close();
+        }catch (SQLException ex) {
+            logger.error("Error to get lessons for student and subject",ex);
         }
         return arrayLessons;
     }
@@ -124,16 +154,17 @@ public class LessonDAOImpl implements LessonDAO{
 
     /**
      * Метод возвращает список предметов, на которых присутствовал студент
-     * @param stud_id - ID студент
+     * @param stud_id - ID студента
      * @return список предметов
      */
-    public ArrayList<Subject> getDistinctSubjectsLessonsForStudent(int stud_id){
+    public ArrayList<SubjectAndMark> getStudentVisitedSubjectsWithTotalMark(int stud_id){
         logger.info("Обращение к DAO");
         Connection connection = connectionManager.getConnection();
-        ArrayList<Subject> arraySubjects = new ArrayList<>();
+        ArrayList<SubjectAndMark> arrayData = new ArrayList<>();
         Subject subject = null;
+        SubjectAndMark subjectAndMark = null;
         try{
-            PreparedStatement statement = connection.prepareStatement("SELECT s.* FROM lessons ln " +
+            PreparedStatement statement = connection.prepareStatement("SELECT s.subj_id, s.name, v.mark FROM lessons ln " +
                     "INNER JOIN subjects s on ln.subj_id = s.subj_id " +
                     "INNER JOIN lesson_visitors v on ln.lsn_id = v.lsn_id " +
                     "WHERE v.stud_id = ? " +
@@ -145,12 +176,13 @@ public class LessonDAOImpl implements LessonDAO{
                         resultSet.getInt("subj_id"),
                         resultSet.getString("name")
                 );
-                arraySubjects.add(subject);
+                subjectAndMark = new SubjectAndMark(subject, resultSet.getFloat("mark"));
+                arrayData.add(subjectAndMark);
             }
             connection.close();
         }catch (SQLException ex) {
-            logger.error("Error get distinct subjects for lessons",ex);
+            logger.error("Error to get visited subjects",ex);
         }
-        return arraySubjects;
+        return arrayData;
     }
 }

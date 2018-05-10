@@ -1,5 +1,6 @@
 package ru.innopolis.stc9.dao;
 
+import org.apache.log4j.Logger;
 import ru.innopolis.stc9.ConnectionManager.ConnectionManager;
 import ru.innopolis.stc9.ConnectionManager.ConnectionManagerJDBCImpl;
 import ru.innopolis.stc9.pojo.Subject;
@@ -11,6 +12,7 @@ import java.sql.SQLException;
 
 public class SubjectDAOImpl implements SubjectDAO {
     private static ConnectionManager connectionManager = ConnectionManagerJDBCImpl.getInstance();
+    private final static Logger logger = Logger.getLogger(SubjectDAOImpl.class);
 
     public boolean addSubject(Subject subject){
         return false;
@@ -30,8 +32,8 @@ public class SubjectDAOImpl implements SubjectDAO {
                     resultSet.getString("name"));
             }
             connection.close();
-        }catch (SQLException e) {
-            e.printStackTrace();
+        }catch (SQLException ex) {
+            logger.error("Error to get Subject",ex);
         }
         return subject;
     }

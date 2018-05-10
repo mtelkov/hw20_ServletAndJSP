@@ -6,6 +6,7 @@ import ru.innopolis.stc9.dao.LessonDAOImpl;
 import ru.innopolis.stc9.pojo.Lesson;
 import ru.innopolis.stc9.pojo.Student;
 import ru.innopolis.stc9.pojo.Subject;
+import ru.innopolis.stc9.pojo.SubjectAndMark;
 
 import java.util.ArrayList;
 
@@ -29,8 +30,13 @@ public class LessonService {
         return lessonDao.getAllLessons();
     }
 
-    public ArrayList<Subject> getDistinctSubjectsLessonsForStudent(int stud_id){
+    public ArrayList<Lesson> getStudentVisitedLessonsWithMark(int subjectId, int stud_id){
         logger.info("Обращение к сервису");
-        return lessonDao.getDistinctSubjectsLessonsForStudent(stud_id);
+        return lessonDao.getStudentVisitedLessonsWithMark(subjectId, stud_id);
+    }
+
+    public ArrayList<SubjectAndMark> getStudentVisitedSubjectsWithTotalMark(int stud_id){
+        logger.info("Обращение к сервису");
+        return lessonDao.getStudentVisitedSubjectsWithTotalMark(stud_id);
     }
 }
