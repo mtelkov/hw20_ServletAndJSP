@@ -3,10 +3,7 @@ package ru.innopolis.stc9.dao;
 import org.apache.log4j.Logger;
 import ru.innopolis.stc9.ConnectionManager.ConnectionManager;
 import ru.innopolis.stc9.ConnectionManager.ConnectionManagerJDBCImpl;
-import ru.innopolis.stc9.pojo.Lesson;
-import ru.innopolis.stc9.pojo.Student;
-import ru.innopolis.stc9.pojo.Subject;
-import ru.innopolis.stc9.pojo.SubjectAndMark;
+import ru.innopolis.stc9.pojo.*;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -121,21 +118,23 @@ public class LessonDAOImpl implements LessonDAO{
      * @param stud_id - ID студента
      * @return список занятий
      */
-    public ArrayList<Lesson> getStudentVisitedLessonsWithMark(int subjectId, int stud_id){
+    public ArrayList<LessonAndMark> getStudentVisitedLessonsWithMark(int subjectId, int stud_id){
         logger.info("Обращение к DAO");
         Connection connection = connectionManager.getConnection();
-        ArrayList<Lesson> arrayLessons = new ArrayList<>();
+        ArrayList<LessonAndMark> arrayLessons = new ArrayList<>();
+        LessonAndMark lessonAndMark = null;
         try{
             PreparedStatement statement = connection.prepareStatement("SELECT ln.*, v.mark FROM lessons ln " +
                     "INNER JOIN subjects s on ln.subj_id = s.subj_id " +
                     "INNER JOIN lesson_visitors v on ln.lsn_id = v.lsn_id " +
                     "WHERE s.subj_id = ? and v.stud_id = ? " +
-                    "ORDER BY s.name");
+                    "ORDER BY ln.lsn_date");
             statement.setInt(1, subjectId);
             statement.setInt(2, stud_id);
             ResultSet resultSet = statement.executeQuery();
             while(resultSet.next()){
-                arrayLessons.add(createNewLesson(resultSet));
+                lessonAndMark = new LessonAndMark(createNewLesson(resultSet), resultSet.getFloat("mark"));
+                arrayLessons.add(lessonAndMark);
             }
             connection.close();
         }catch (SQLException ex) {
@@ -164,10 +163,12 @@ public class LessonDAOImpl implements LessonDAO{
         Subject subject = null;
         SubjectAndMark subjectAndMark = null;
         try{
-            PreparedStatement statement = connection.prepareStatement("SELECT s.subj_id, s.name, v.mark FROM lessons ln " +
+            PreparedStatement statement = connection.prepareStatement(
+                    "SELECT s.subj_id, s.name, SUM(v.mark) FROM lessons ln " +
                     "INNER JOIN subjects s on ln.subj_id = s.subj_id " +
                     "INNER JOIN lesson_visitors v on ln.lsn_id = v.lsn_id " +
                     "WHERE v.stud_id = ? " +
+                    "GROUP BY s.subj_id, s.name " +
                     "ORDER BY s.name");
             statement.setInt(1, stud_id);
             ResultSet resultSet = statement.executeQuery();
@@ -176,7 +177,7 @@ public class LessonDAOImpl implements LessonDAO{
                         resultSet.getInt("subj_id"),
                         resultSet.getString("name")
                 );
-                subjectAndMark = new SubjectAndMark(subject, resultSet.getFloat("mark"));
+                subjectAndMark = new SubjectAndMark(subject, resultSet.getFloat(3));
                 arrayData.add(subjectAndMark);
             }
             connection.close();

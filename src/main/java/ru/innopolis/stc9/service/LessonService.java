@@ -3,10 +3,7 @@ package ru.innopolis.stc9.service;
 import org.apache.log4j.Logger;
 import ru.innopolis.stc9.dao.LessonDAO;
 import ru.innopolis.stc9.dao.LessonDAOImpl;
-import ru.innopolis.stc9.pojo.Lesson;
-import ru.innopolis.stc9.pojo.Student;
-import ru.innopolis.stc9.pojo.Subject;
-import ru.innopolis.stc9.pojo.SubjectAndMark;
+import ru.innopolis.stc9.pojo.*;
 
 import java.util.ArrayList;
 
@@ -30,7 +27,7 @@ public class LessonService {
         return lessonDao.getAllLessons();
     }
 
-    public ArrayList<Lesson> getStudentVisitedLessonsWithMark(int subjectId, int stud_id){
+    public ArrayList<LessonAndMark> getStudentVisitedLessonsWithMark(int subjectId, int stud_id){
         logger.info("Обращение к сервису");
         return lessonDao.getStudentVisitedLessonsWithMark(subjectId, stud_id);
     }

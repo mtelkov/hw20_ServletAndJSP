@@ -7,28 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b08ec50-7171-490c-a121-8fce83b56f0f" name="Default" comment="added public_lessons.jsp">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/pojo/SubjectAndMark.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/service/SubjectService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/student_subjects.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/pojo/LessonAndMark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.7/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/aa579e9e-6bc0-4765-88ea-ba8c860acc10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/aa579e9e-6bc0-4765-88ea-ba8c860acc10.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/Telkov20-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/Telkov20-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/innopolis/stc9/controller/StudentSubjectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/innopolis/stc9/controller/StudentSubjectController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/ru/innopolis/stc9/dao/LessonDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/innopolis/stc9/dao/LessonDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/ru/innopolis/stc9/dao/LessonDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/innopolis/stc9/dao/LessonDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/innopolis/stc9/dao/SubjectDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/innopolis/stc9/dao/SubjectDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/innopolis/stc9/dao/SubjectDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/innopolis/stc9/dao/SubjectDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ru/innopolis/stc9/pojo/SubjectAndMark.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/innopolis/stc9/pojo/SubjectAndMark.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/ru/innopolis/stc9/service/LessonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ru/innopolis/stc9/service/LessonService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/controller/StudentSubjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/controller/StudentSubjectController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/dao/LessonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/dao/LessonDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/dao/LessonDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/dao/LessonDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/dao/SubjectDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/dao/SubjectDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/dao/SubjectDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/dao/SubjectDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/pojo/SubjectAndMark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/pojo/SubjectAndMark.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/service/LessonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/service/LessonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin_dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin_dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/public_lessons.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/public_lessons.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/student_dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/student_dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/student_subjects.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/student_subjects.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -128,53 +123,80 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="78" selection-start-line="19" selection-start-column="78" selection-end-line="19" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="student_subjects.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/student_subjects.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="106" selection-start-line="21" selection-start-column="106" selection-end-line="21" selection-end-column="106" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="87">
+              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="public_lessons.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SubjectAndMark.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/pojo/SubjectAndMark.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="public_lessons.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/public_lessons.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="72" column="50" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
+            <state relative-caret-position="127">
+              <caret line="72" column="62" lean-forward="true" selection-start-line="72" selection-start-column="62" selection-end-line="72" selection-end-column="62" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/header.jsp">
+      <file leaf-file-name="LessonAndMark.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/pojo/LessonAndMark.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="50" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="50" />
+            <state relative-caret-position="102">
+              <caret line="6" column="24" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="24" />
+              <folding>
+                <element signature="e#322#323#0" expanded="true" />
+                <element signature="e#351#352#0" expanded="true" />
+                <element signature="e#381#382#0" expanded="true" />
+                <element signature="e#408#409#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LessonDAOImpl.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="console_10.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/aa579e9e-6bc0-4765-88ea-ba8c860acc10/console_10.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="29" selection-start-column="29" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console_11.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/aa579e9e-6bc0-4765-88ea-ba8c860acc10/console_11.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="11" selection-start-column="11" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LessonDAOImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/dao/LessonDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="159" column="75" selection-start-line="159" selection-start-column="75" selection-end-line="159" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LessonDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/dao/LessonDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="75" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="75" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="318">
+              <caret line="130" column="41" selection-start-line="130" selection-start-column="41" selection-end-line="130" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -182,40 +204,8 @@
       <file leaf-file-name="LessonService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/service/LessonService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="37" column="75" selection-start-line="37" selection-start-column="75" selection-end-line="37" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SubjectDAOImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/dao/SubjectDAOImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SubjectDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/dao/SubjectDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SubjectService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/service/SubjectService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#397#398#0" expanded="true" />
-                <element signature="e#429#430#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="398">
+              <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -422,9 +412,9 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4577449104388" />
+        <entry key="$PROJECT_DIR$" value="4577628568288" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="259083145" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="3444065092" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="283432531" />
       </map>
     </option>
@@ -610,10 +600,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/admin.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/controller/LessonsController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/dashboard_admin.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/dashboardAdmin.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/controller/DashboardController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/controller/AdminDashboardController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/controller/TutorDashboardController.java" />
@@ -624,7 +610,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/aa579e9e-6bc0-4765-88ea-ba8c860acc10/console_2.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/aa579e9e-6bc0-4765-88ea-ba8c860acc10/console_3.sql" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/webapp/footer.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/controller/filter/TutorFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/controller/filter/AdminFilter.java" />
@@ -643,7 +628,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/controller/PublicLessonInfoController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/header.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/pojo/SubjectAndMark.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/controller/StudentSubjectController.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/aa579e9e-6bc0-4765-88ea-ba8c860acc10/console_4.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/aa579e9e-6bc0-4765-88ea-ba8c860acc10/console_5.sql" />
@@ -656,11 +640,17 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/dao/SubjectDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/dao/SubjectDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/service/SubjectService.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/pojo/LessonAndMark.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/dao/LessonDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/dao/LessonDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/service/LessonService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/student_subjects.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/public_lessons.jsp" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/aa579e9e-6bc0-4765-88ea-ba8c860acc10/console_10.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/aa579e9e-6bc0-4765-88ea-ba8c860acc10/console_11.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/pojo/SubjectAndMark.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/student_subjects.jsp" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/aa579e9e-6bc0-4765-88ea-ba8c860acc10/console_12.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/dao/LessonDAOImpl.java" />
       </list>
     </option>
   </component>
@@ -690,103 +680,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Telkov20" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Telkov_20(servlet_jsp)" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="Telkov20" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Telkov_20(servlet_jsp)" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Telkov20" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Telkov_20(servlet_jsp)" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="Telkov20" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Telkov_20(servlet_jsp)" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Telkov20" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Telkov_20(servlet_jsp)" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Telkov20" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Telkov_20(servlet_jsp)" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Telkov20" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Telkov_20(servlet_jsp)" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pojo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Telkov20" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Telkov_20(servlet_jsp)" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Telkov20" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Telkov_20(servlet_jsp)" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Telkov20" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Telkov_20(servlet_jsp)" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Telkov20" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Telkov_20(servlet_jsp)" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Telkov20" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Telkov_20(servlet_jsp)" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Telkov20" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Telkov_20(servlet_jsp)" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -803,7 +696,83 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Telkov20" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Telkov_20(servlet_jsp)" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="Telkov20" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Telkov_20(servlet_jsp)" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Telkov20" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Telkov_20(servlet_jsp)" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Telkov20" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Telkov_20(servlet_jsp)" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Telkov20" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Telkov_20(servlet_jsp)" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Telkov20" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Telkov_20(servlet_jsp)" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Telkov20" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Telkov_20(servlet_jsp)" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Telkov20" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Telkov_20(servlet_jsp)" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Telkov20" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Telkov_20(servlet_jsp)" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Telkov20" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Telkov_20(servlet_jsp)" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="Telkov20" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -833,6 +802,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1020,11 +990,12 @@
       <workItem from="1525872820532" duration="25808000" />
       <workItem from="1525940683308" duration="7581000" />
       <workItem from="1525967615685" duration="15925000" />
+      <workItem from="1526068569933" duration="3248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69790000" />
+    <option name="totallyTimeSpent" value="73038000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1037,7 +1008,7 @@
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="2" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.29475984" />
-      <window_info anchor="right" id="Database" order="5" weight="0.17864583" />
+      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.17864583" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="3" />
@@ -1051,18 +1022,18 @@
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32969433" />
       <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Database Console" order="14" weight="0.2838428" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2328125" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32969433" />
-      <window_info anchor="right" id="Gradle" order="6" visible="true" weight="0.14583333" />
+      <window_info anchor="right" id="Gradle" order="6" weight="0.18177083" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Database Console" order="14" weight="0.2838428" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32969433" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1081,41 +1052,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/dao/StudentDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="46" lean-forward="true" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/pojo/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/aa579e9e-6bc0-4765-88ea-ba8c860acc10/console_3.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="29" lean-forward="true" selection-start-column="29" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/aa579e9e-6bc0-4765-88ea-ba8c860acc10/console_2.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" selection-start-column="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="55" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/controller/filter/TutorFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -1256,33 +1192,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/controller/PublicLessonInfoController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/pojo/SubjectAndMark.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="27" />
-          <folding>
-            <element signature="e#349#350#0" expanded="true" />
-            <element signature="e#379#380#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1386,12 +1299,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/service/SubjectService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="170">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#397#398#0" expanded="true" />
-            <element signature="e#429#430#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1417,44 +1328,96 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="78" selection-start-line="19" selection-start-column="78" selection-end-line="19" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/aa579e9e-6bc0-4765-88ea-ba8c860acc10/console_10.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="29" selection-start-column="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/dao/LessonDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="75" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="75" />
+        <state relative-caret-position="170">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/dao/LessonDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/public_lessons.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="159" column="75" selection-start-line="159" selection-start-column="75" selection-end-line="159" selection-end-column="75" />
+        <state relative-caret-position="127">
+          <caret line="72" column="62" lean-forward="true" selection-start-line="72" selection-start-column="62" selection-end-line="72" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/student_subjects.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/pojo/LessonAndMark.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="106" selection-start-line="21" selection-start-column="106" selection-end-line="21" selection-end-column="106" />
+        <state relative-caret-position="102">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="24" />
           <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#351#352#0" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+            <element signature="e#408#409#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/service/LessonService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="37" column="75" selection-start-line="37" selection-start-column="75" selection-end-line="37" selection-end-column="75" />
+        <state relative-caret-position="398">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/public_lessons.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/pojo/SubjectAndMark.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="72" column="50" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
+        <state relative-caret-position="391">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/student_subjects.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/aa579e9e-6bc0-4765-88ea-ba8c860acc10/console_11.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="11" selection-start-column="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/aa579e9e-6bc0-4765-88ea-ba8c860acc10/console_12.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/innopolis/stc9/dao/LessonDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="130" column="41" selection-start-line="130" selection-start-column="41" selection-end-line="130" selection-end-column="41" />
         </state>
       </provider>
     </entry>

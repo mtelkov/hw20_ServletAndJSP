@@ -14,7 +14,7 @@
         <table border="1" cellspacing="0" cellpadding="3" align="center">
             <tr>
                 <th>Subject name</th>
-                <th>Avr. Mark</th>
+                <th>Total Mark</th>
             </tr>
             <%
                 LessonService lessonService = new LessonService();
@@ -26,7 +26,7 @@
                 <c:forEach var="data" items="${arrayData}" >
                     <tr>
                         <td><a href="${pageContext.request.contextPath}/student/dashboard/lessons?subjectId=${data.subject.subj_id}">${data.subject.name}</a></td>
-                        <td>${data.avrMark}</td>
+                        <td>${data.totalMark}</td>
                     </tr>
                 </c:forEach>
             </c:if>

@@ -6,6 +6,7 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="ru.innopolis.stc9.pojo.User" %>
 <%@ page import="ru.innopolis.stc9.service.SubjectService" %>
+<%@ page import="ru.innopolis.stc9.pojo.LessonAndMark" %>
 
 <%@ include file="header.jsp" %>
 <%@ include file="aside.jsp" %>
@@ -63,17 +64,17 @@
                     <!--вывести занятия по предмету для студента-->
                     <%
                         User user =  (User)request.getSession().getAttribute("user");
-                        ArrayList<Lesson> arrayLsn = lessonService.getStudentVisitedLessonsWithMark(Integer.valueOf(stringSubjId), user.getId());
-                        request.setAttribute("arrayLsn", arrayLsn);
+                        ArrayList<LessonAndMark> arrayData = lessonService.getStudentVisitedLessonsWithMark(Integer.valueOf(stringSubjId), user.getId());
+                        request.setAttribute("arrayData", arrayData);
                     %>
-                    <c:if test="${arrayLsn.size() > 0}">
-                        <c:forEach var="lesson" items="${arrayLsn}" >
+                    <c:if test="${arrayData.size() > 0}">
+                        <c:forEach var="data" items="${arrayData}" >
                             <tr>
-                                <td>${lesson.lsn_id}</td>
-                                <td>${lesson.lsn_date}</td>
-                                <td>${lesson.subjectImpl.name}</td>
-                                <td>${lesson.tutorImpl.grade} ${" "} ${lesson.tutorImpl.FIO}</td>
-                                <td>mark</td>
+                                <td>${data.lesson.lsn_id}</td>
+                                <td>${data.lesson.lsn_date}</td>
+                                <td>${data.lesson.subjectImpl.name}</td>
+                                <td>${data.lesson.tutorImpl.grade} ${" "} ${data.lesson.tutorImpl.FIO}</td>
+                                <td>${data.mark}</td>
                             </tr>
                         </c:forEach>
                     </c:if>
