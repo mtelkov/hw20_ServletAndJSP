@@ -34,6 +34,15 @@
         <url-pattern>/admin/dashboard/lessons</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>AddLessonController</servlet-name>
+        <servlet-class>ru.innopolis.stc9.controller.AddLessonController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddLessonController</servlet-name>
+        <url-pattern>/admin/dashboard/add_lesson</url-pattern>
+    </servlet-mapping>
+
     <!--TUTOR-->
     <servlet>
         <servlet-name>TutorDashboardController</servlet-name>
