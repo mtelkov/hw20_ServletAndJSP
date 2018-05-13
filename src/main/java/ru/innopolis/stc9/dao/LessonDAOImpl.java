@@ -5,10 +5,7 @@ import ru.innopolis.stc9.ConnectionManager.ConnectionManager;
 import ru.innopolis.stc9.ConnectionManager.ConnectionManagerJDBCImpl;
 import ru.innopolis.stc9.pojo.*;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
@@ -52,11 +49,11 @@ public class LessonDAOImpl implements LessonDAO{
         Connection connection = connectionManager.getConnection();
         try{
             PreparedStatement statement = connection.prepareStatement(sqlRequest);
-            statement.setString(1, String.valueOf(lesson.getSubj_id()));
-            statement.setString(2, String.valueOf(lesson.getTutor_id()));
-            statement.setString(3, String.valueOf(lesson.getAdm_id()));
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-            statement.setString(4, sdf.format(lesson.getLsn_date()));
+            statement.setInt(1, lesson.getSubj_id());
+            statement.setInt(2, lesson.getTutor_id());
+            statement.setInt(3, lesson.getAdm_id());
+            java.sql.Date dateL =Date.valueOf(lesson.getLsn_date().toString());
+            statement.setDate(4, dateL);
             result = statement.executeUpdate();
             connection.close();
         }catch (SQLException ex) {
