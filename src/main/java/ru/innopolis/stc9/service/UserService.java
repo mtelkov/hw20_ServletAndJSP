@@ -1,6 +1,7 @@
 package ru.innopolis.stc9.service;
 
 import org.apache.log4j.Logger;
+import ru.innopolis.stc9.ConnectionManager.CryptoUtils;
 import ru.innopolis.stc9.dao.*;
 import ru.innopolis.stc9.pojo.User;
 import ru.innopolis.stc9.pojo.UserTypes;
@@ -21,8 +22,16 @@ public class UserService {
             case UserTypes.USER_TUTOR: user = tutorDao.getTutorByLogin(login);break;
             case UserTypes.USER_STUDENT: user = studentDao.getStudentByLogin(login);break;
         }
-        if((user != null) && (user.getPassw().equals(password)))
-            return user;
-        else return null;
+        if(user != null){
+            String inputHash = "";
+            try {
+                inputHash = CryptoUtils.byteArrayToHexString(CryptoUtils.computeHash(password));
+            } catch (Exception ex) {
+                logger.error("Error to get Hash from input password",ex);
+                return null;
+            }
+            if(inputHash.equals(user.getPassw()))return user;
+        }
+        return null;
     }
 }
