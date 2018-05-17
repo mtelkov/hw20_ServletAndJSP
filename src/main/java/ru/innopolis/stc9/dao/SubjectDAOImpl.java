@@ -3,7 +3,8 @@ package ru.innopolis.stc9.dao;
 import org.apache.log4j.Logger;
 import ru.innopolis.stc9.ConnectionManager.ConnectionManager;
 import ru.innopolis.stc9.ConnectionManager.ConnectionManagerJDBCImpl;
-import ru.innopolis.stc9.pojo.Subject;
+import ru.innopolis.stc9.dao.factory.SubjectFactory;
+import ru.innopolis.stc9.dao.pojo.Subject;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -14,24 +15,7 @@ import java.util.ArrayList;
 public class SubjectDAOImpl implements SubjectDAO {
     private static ConnectionManager connectionManager = ConnectionManagerJDBCImpl.getInstance();
     private final static Logger logger = Logger.getLogger(SubjectDAOImpl.class);
-
-    /**
-     * Метод создает предмет на основе данных из БД
-     * @param resultSet
-     * @return Subject
-     */
-    private Subject createNewSubject(ResultSet resultSet){
-        Subject subject = null;
-        try{
-            subject = new Subject(
-                    resultSet.getInt("subj_id"),
-                    resultSet.getString("name"));
-        }catch (SQLException ex) {
-            logger.error("Error to create new Subject",ex);
-            return null;
-        }
-        return subject;
-    }
+    private SubjectFactory subjectFactory = new SubjectFactory();
 
     public boolean addSubject(Subject subject){
         return false;
@@ -46,9 +30,7 @@ public class SubjectDAOImpl implements SubjectDAO {
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
-                subject = new Subject(
-                    resultSet.getInt("subj_id"),
-                    resultSet.getString("name"));
+                subject = subjectFactory.createSubject(resultSet);
             }
             connection.close();
         }catch (SQLException ex) {
@@ -69,7 +51,7 @@ public class SubjectDAOImpl implements SubjectDAO {
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM subjects ORDER BY name");
             ResultSet resultSet = statement.executeQuery();
             while(resultSet.next()){
-                arrSubj.add(createNewSubject(resultSet));
+                arrSubj.add(subjectFactory.createSubject(resultSet));
             }
             connection.close();
         }catch (SQLException ex) {

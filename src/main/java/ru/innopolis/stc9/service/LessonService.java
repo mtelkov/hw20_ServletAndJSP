@@ -3,7 +3,7 @@ package ru.innopolis.stc9.service;
 import org.apache.log4j.Logger;
 import ru.innopolis.stc9.dao.LessonDAO;
 import ru.innopolis.stc9.dao.LessonDAOImpl;
-import ru.innopolis.stc9.pojo.*;
+import ru.innopolis.stc9.dao.pojo.*;
 
 import java.util.ArrayList;
 

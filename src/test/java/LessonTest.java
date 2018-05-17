@@ -1,6 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
-import ru.innopolis.stc9.pojo.Lesson;
+import ru.innopolis.stc9.dao.pojo.Lesson;
 
 import java.util.Calendar;
 import java.util.Date;

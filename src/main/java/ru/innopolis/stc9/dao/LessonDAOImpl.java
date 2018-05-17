@@ -3,39 +3,17 @@ package ru.innopolis.stc9.dao;
 import org.apache.log4j.Logger;
 import ru.innopolis.stc9.ConnectionManager.ConnectionManager;
 import ru.innopolis.stc9.ConnectionManager.ConnectionManagerJDBCImpl;
-import ru.innopolis.stc9.pojo.*;
+import ru.innopolis.stc9.dao.factory.LessonFactory;
+import ru.innopolis.stc9.dao.factory.SubjectFactory;
+import ru.innopolis.stc9.dao.pojo.*;
 
 import java.sql.*;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class LessonDAOImpl implements LessonDAO{
     private static ConnectionManager connectionManager = ConnectionManagerJDBCImpl.getInstance();
     private final static Logger logger = Logger.getLogger(LessonDAOImpl.class);
-
-    /**
-     * Создать занятие на основе данных в ResultSet
-     * @param resultSet - источник данных
-     * @return Lesson - занятие
-     */
-    private Lesson createNewLesson(ResultSet resultSet){
-        Lesson lesson = null;
-        try{
-            lesson = new Lesson(
-                resultSet.getInt("lsn_id"),
-                resultSet.getInt("subj_id"),
-                resultSet.getInt("tutor_id"),
-                resultSet.getInt("adm_id"),
-                resultSet.getDate("lsn_date"));
-            lesson.setAdminImpl(new AdminDAOImpl().getAdminById(lesson.getAdm_id()));
-            lesson.setTutorImpl(new TutorDAOImpl().getTutorById(lesson.getTutor_id()));
-            lesson.setSubjectImpl(new SubjectDAOImpl().getSubjectById(lesson.getSubj_id()));
-        }catch (SQLException ex) {
-            logger.error("Error to create new Lesson",ex);
-            return null;
-        }
-        return lesson;
-    }
+    private LessonFactory lessonFactory = new LessonFactory();
 
     /**
      * Добавить занятие в БД
@@ -79,7 +57,7 @@ public class LessonDAOImpl implements LessonDAO{
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
-                lesson = createNewLesson(resultSet);
+                lesson = lessonFactory.createLesson(resultSet);
             }
             connection.close();
         }catch (SQLException ex) {
@@ -100,7 +78,7 @@ public class LessonDAOImpl implements LessonDAO{
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM lessons ORDER BY lsn_date, subj_id");
             ResultSet resultSet = statement.executeQuery();
             while(resultSet.next()){
-                arrayLessons.add(createNewLesson(resultSet));
+                arrayLessons.add(lessonFactory.createLesson(resultSet));
             }
             connection.close();
         }catch (SQLException ex) {
@@ -130,7 +108,7 @@ public class LessonDAOImpl implements LessonDAO{
             statement.setInt(2, stud_id);
             ResultSet resultSet = statement.executeQuery();
             while(resultSet.next()){
-                lessonAndMark = new LessonAndMark(createNewLesson(resultSet), resultSet.getFloat("mark"));
+                lessonAndMark = new LessonAndMark(lessonFactory.createLesson(resultSet), resultSet.getFloat("mark"));
                 arrayLessons.add(lessonAndMark);
             }
             connection.close();
@@ -169,11 +147,9 @@ public class LessonDAOImpl implements LessonDAO{
                     "ORDER BY s.name");
             statement.setInt(1, stud_id);
             ResultSet resultSet = statement.executeQuery();
+            SubjectFactory subjectFactory = new SubjectFactory();
             while(resultSet.next()){
-                subject = new Subject(
-                        resultSet.getInt("subj_id"),
-                        resultSet.getString("name")
-                );
+                subject = subjectFactory.createSubject(resultSet);
                 subjectAndMark = new SubjectAndMark(subject, resultSet.getFloat(3));
                 arrayData.add(subjectAndMark);
             }

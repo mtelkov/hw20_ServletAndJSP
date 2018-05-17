@@ -1,6 +1,6 @@
 package ru.innopolis.stc9.dao;
 
-import ru.innopolis.stc9.pojo.*;
+import ru.innopolis.stc9.dao.pojo.*;
 
 import java.util.ArrayList;
 

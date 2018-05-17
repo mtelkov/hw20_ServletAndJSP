@@ -1,6 +1,6 @@
 package ru.innopolis.stc9.dao;
 
-import ru.innopolis.stc9.pojo.Admin;
+import ru.innopolis.stc9.dao.pojo.Admin;
 
 import java.sql.SQLException;
 

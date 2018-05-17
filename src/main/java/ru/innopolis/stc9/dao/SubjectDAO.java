@@ -1,8 +1,7 @@
 package ru.innopolis.stc9.dao;
 
-import ru.innopolis.stc9.pojo.Subject;
+import ru.innopolis.stc9.dao.pojo.Subject;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 public interface SubjectDAO {

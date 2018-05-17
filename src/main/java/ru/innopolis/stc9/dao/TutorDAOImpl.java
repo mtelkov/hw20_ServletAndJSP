@@ -3,7 +3,9 @@ package ru.innopolis.stc9.dao;
 import org.apache.log4j.Logger;
 import ru.innopolis.stc9.ConnectionManager.ConnectionManager;
 import ru.innopolis.stc9.ConnectionManager.ConnectionManagerJDBCImpl;
-import ru.innopolis.stc9.pojo.Tutor;
+import ru.innopolis.stc9.dao.factory.UserFactory;
+import ru.innopolis.stc9.dao.pojo.Tutor;
+import ru.innopolis.stc9.dao.pojo.UserTypes;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -14,28 +16,7 @@ import java.util.ArrayList;
 public class TutorDAOImpl implements TutorDAO{
     private static ConnectionManager connectionManager = ConnectionManagerJDBCImpl.getInstance();
     private final static Logger logger = Logger.getLogger(TutorDAOImpl.class);
-
-    /**
-     * Метод создает преподавателя на основе данных из БД
-     * @param resultSet
-     * @return Tutor
-     */
-    private Tutor createNewTutor(ResultSet resultSet){
-        Tutor tutor = null;
-        try{
-            tutor = new Tutor(
-                    resultSet.getInt("tutor_id"),
-                    resultSet.getString("fio"),
-                    resultSet.getString("login"),
-                    resultSet.getString("passw"),
-                    resultSet.getString("grade"),
-                    resultSet.getInt("subj_id"));
-        }catch (SQLException ex) {
-            logger.error("Error to create new Tutor",ex);
-            return null;
-        }
-        return tutor;
-    }
+    private UserFactory userFactory = new UserFactory();
 
     public boolean addTutor(Tutor tutor){return false;}
 
@@ -53,11 +34,11 @@ public class TutorDAOImpl implements TutorDAO{
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
-                tutor = tutor = createNewTutor(resultSet);
+                tutor = (Tutor) userFactory.createUser(UserTypes.USER_TUTOR, resultSet);
             }
             connection.close();
-        }catch (SQLException e) {
-            e.printStackTrace();
+        }catch (SQLException ex) {
+            logger.error("Error get tutor by id",ex);
         }
         return tutor;
     }
@@ -76,11 +57,11 @@ public class TutorDAOImpl implements TutorDAO{
             statement.setString(1, login);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
-                tutor = createNewTutor(resultSet);
+                tutor = (Tutor) userFactory.createUser(UserTypes.USER_TUTOR, resultSet);
             }
             connection.close();
-        }catch (SQLException e) {
-            e.printStackTrace();
+        }catch (SQLException ex) {
+            logger.error("Error get tutor by login",ex);
         }
         return tutor;
     }
@@ -97,7 +78,7 @@ public class TutorDAOImpl implements TutorDAO{
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM tutors ORDER BY fio");
             ResultSet resultSet = statement.executeQuery();
             while(resultSet.next()){
-                arrTutors.add(createNewTutor(resultSet));
+                arrTutors.add((Tutor)userFactory.createUser(UserTypes.USER_TUTOR, resultSet));
             }
             connection.close();
         }catch (SQLException ex) {

@@ -1,10 +1,9 @@
 package ru.innopolis.stc9.controller;
 
 import org.apache.log4j.Logger;
-import ru.innopolis.stc9.pojo.Lesson;
-import ru.innopolis.stc9.pojo.User;
+import ru.innopolis.stc9.dao.pojo.Lesson;
+import ru.innopolis.stc9.dao.pojo.User;
 import ru.innopolis.stc9.service.LessonService;
-import ru.innopolis.stc9.service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

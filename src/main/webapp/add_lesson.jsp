@@ -1,10 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<%@ page import="ru.innopolis.stc9.pojo.Subject" %>
+<%@ page import="ru.innopolis.stc9.dao.pojo.Subject" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="ru.innopolis.stc9.service.SubjectService" %>
-<%@ page import="ru.innopolis.stc9.pojo.Tutor" %>
+<%@ page import="ru.innopolis.stc9.dao.pojo.Tutor" %>
 <%@ page import="ru.innopolis.stc9.service.TutorService" %>
 
 <%@ include file="header.jsp" %>

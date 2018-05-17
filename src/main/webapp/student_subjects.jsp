@@ -2,8 +2,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <%@ page import="ru.innopolis.stc9.service.LessonService" %>
-<%@ page import="ru.innopolis.stc9.pojo.User" %>
-<%@ page import="ru.innopolis.stc9.pojo.SubjectAndMark" %>
+<%@ page import="ru.innopolis.stc9.dao.pojo.User" %>
+<%@ page import="ru.innopolis.stc9.dao.pojo.SubjectAndMark" %>
 <%@ page import="java.util.ArrayList" %>
 
 <%@ include file="header.jsp" %>

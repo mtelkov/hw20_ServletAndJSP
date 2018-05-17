@@ -1,6 +1,6 @@
 package ru.innopolis.stc9.dao;
 
-import ru.innopolis.stc9.pojo.Tutor;
+import ru.innopolis.stc9.dao.pojo.Tutor;
 
 import java.sql.SQLException;
 import java.util.ArrayList;

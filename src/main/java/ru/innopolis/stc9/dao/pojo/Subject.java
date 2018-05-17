@@ -1,4 +1,4 @@
-package ru.innopolis.stc9.pojo;
+package ru.innopolis.stc9.dao.pojo;
 
 public class Subject {
     private int subj_id;

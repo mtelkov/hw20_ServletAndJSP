@@ -3,8 +3,8 @@ package ru.innopolis.stc9.service;
 import org.apache.log4j.Logger;
 import ru.innopolis.stc9.ConnectionManager.CryptoUtils;
 import ru.innopolis.stc9.dao.*;
-import ru.innopolis.stc9.pojo.User;
-import ru.innopolis.stc9.pojo.UserTypes;
+import ru.innopolis.stc9.dao.pojo.User;
+import ru.innopolis.stc9.dao.pojo.UserTypes;
 
 import java.sql.SQLException;
 
@@ -17,7 +17,14 @@ public class UserService {
     public User checkAuth(String userType, String login, String password) throws SQLException {
         if(userType==null || login==null || password==null) throw new NullPointerException();
         User user = null;
-        switch (Integer.valueOf(userType)){
+        int user_type = 0;
+        try{
+            user_type = Integer.valueOf(userType);
+        }catch(Exception ex){
+            logger.error("Error userType parameter",ex);
+            return null;
+        }
+        switch (user_type){
             case UserTypes.USER_ADMIN: user = adminDao.getAdminByLogin(login);break;
             case UserTypes.USER_TUTOR: user = tutorDao.getTutorByLogin(login);break;
             case UserTypes.USER_STUDENT: user = studentDao.getStudentByLogin(login);break;

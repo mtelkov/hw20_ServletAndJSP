@@ -1,5 +1,5 @@
 import org.junit.Test;
-import ru.innopolis.stc9.pojo.Lesson;
+import ru.innopolis.stc9.dao.pojo.Lesson;
 import ru.innopolis.stc9.service.LessonService;
 
 import java.util.ArrayList;

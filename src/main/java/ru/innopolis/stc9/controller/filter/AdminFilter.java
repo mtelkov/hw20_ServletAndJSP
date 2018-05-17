@@ -1,6 +1,6 @@
 package ru.innopolis.stc9.controller.filter;
 
-import ru.innopolis.stc9.pojo.UserTypes;
+import ru.innopolis.stc9.dao.pojo.UserTypes;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;

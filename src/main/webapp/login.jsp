@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<%@ page import="ru.innopolis.stc9.pojo.UserTypes" %>
+<%@ page import="ru.innopolis.stc9.dao.pojo.UserTypes" %>
 
 <%@ include file="header.jsp" %>
 <%@ include file="aside.jsp" %>
